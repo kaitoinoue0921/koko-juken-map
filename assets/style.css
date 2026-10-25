@@ -1,0 +1,64 @@
+:root{
+  --bg:#f4f7fb;--surface:#fff;--ink:#1f2937;--ink-soft:#5b6575;--rule:#e1e7ef;
+  --primary:#1d6fd8;--primary-dark:#1556ab;--primary-soft:#e8f1fd;
+  --accent:#f08a00;--accent-soft:#fff3df;--ok:#14935a;
+  --shadow:0 1px 3px rgba(20,40,80,.08),0 4px 14px rgba(20,40,80,.05);
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#10151d;--surface:#18202b;--ink:#e8edf3;--ink-soft:#a3adbb;--rule:#2a3442;
+  --primary:#6aaaf5;--primary-dark:#8ec0f8;--primary-soft:#1b2a3f;
+  --accent:#ffb347;--accent-soft:#33291a;--ok:#4cc38a;--shadow:none}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",system-ui,sans-serif;line-height:1.85;font-size:16px}
+a{color:var(--primary)}
+.wrap{max-width:880px;margin:0 auto;padding:0 16px}
+
+.site-head{position:sticky;top:0;z-index:10;background:var(--surface);border-bottom:1px solid var(--rule)}
+.site-head .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:2px 20px;padding-top:10px;padding-bottom:6px}
+.brand{font-weight:900;font-size:1.05rem;color:var(--primary);text-decoration:none;display:flex;align-items:center;gap:8px}
+.brand::before{content:"";width:12px;height:12px;border-radius:3px;background:var(--primary);display:inline-block}
+.nav{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:4px 16px;font-size:.88rem;-webkit-overflow-scrolling:touch}
+.nav a{color:var(--ink-soft);text-decoration:none;padding:6px 2px;white-space:nowrap;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--primary);border-bottom-color:var(--primary)}
+
+.hero{background:linear-gradient(135deg,var(--primary-soft),var(--surface));border-bottom:1px solid var(--rule);padding:30px 0 26px;margin-bottom:22px}
+.hero .tag{display:inline-block;background:var(--primary);color:#fff;font-size:.75rem;font-weight:700;padding:2px 10px;border-radius:99px;margin-bottom:8px}
+h1{font-size:1.65rem;font-weight:900;line-height:1.4;margin:0 0 10px}
+.lead{color:var(--ink-soft);margin:0}
+h2{font-size:1.3rem;font-weight:900;margin:44px 0 14px;padding-left:12px;border-left:5px solid var(--primary);line-height:1.4;scroll-margin-top:70px}
+h3{font-size:1.05rem;margin:0 0 6px}
+p{margin:.6em 0}
+.note{font-size:.88rem;color:var(--ink-soft)}
+ul{padding-left:1.3em}
+li{margin:4px 0}
+
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:0 0 6px}
+.tile{display:block;background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:12px 14px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+.tile b{display:block;color:var(--primary);font-size:.98rem}
+.tile span{font-size:.8rem;color:var(--ink-soft)}
+.tile:hover{border-color:var(--primary)}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:12px 10px;text-align:center;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:1.6rem;color:var(--primary);line-height:1.2}
+.stat span{font-size:.78rem;color:var(--ink-soft)}
+
+.block{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:14px 18px;margin:12px 0;box-shadow:var(--shadow)}
+.block h3{color:var(--primary)}
+.block.now{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.block.now h3::after{content:"いまここ";margin-left:8px;font-size:.72rem;background:var(--accent);color:#fff;padding:1px 8px;border-radius:99px;vertical-align:middle}
+.judge{background:var(--accent-soft);border-radius:12px;padding:12px 16px;margin:14px 0}
+.judge::before{content:"ポイント";display:block;font-size:.76rem;font-weight:900;color:var(--accent);letter-spacing:.06em}
+
+.tscroll{overflow-x:auto;border-radius:12px;border:1px solid var(--rule);background:var(--surface);box-shadow:var(--shadow)}
+table.t{border-collapse:collapse;width:100%;font-size:.9rem;min-width:600px}
+table.t th,table.t td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule)}
+table.t thead th{background:var(--primary);color:#fff;white-space:nowrap}
+table.t tbody th{background:var(--primary-soft);white-space:nowrap}
+table.t tr:last-child th,table.t tr:last-child td{border-bottom:none}
+
+footer{margin:56px 0 40px;padding-top:16px;border-top:1px solid var(--rule)}
+h2.more-head{border:none;padding:0;font-size:1rem;color:var(--ink-soft);margin:0 0 6px}
+.src{font-size:.84rem;color:var(--ink-soft);word-break:break-all}
+@media(max-width:560px){h1{font-size:1.4rem}.wrap{padding:0 14px}}

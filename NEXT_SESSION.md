@@ -3,7 +3,7 @@
 ## 進捗（2026-10-25）
 - igakubu-roadmap の assets/style.css だけ流用。JSなしの静的2ページ（index.html=都立高校入試、chugaku.html=都立中高一貫）
 - 数字は東京都教育委員会の令和9年度実施要綱PDFで確認済み（都立高校: 2026-09-17公表、都立中: 2026-06公表）
-- 未公開・未git・未デプロイ。ブラウザ表示は未確認だった場合は要確認
+- 2026-10-25 公開済み kaitoinoue0921.github.io/koko-juken-map（repo kaitoinoue0921/koko-juken-map）。UIは白地に青のカード型に変更、スマホ幅確認済み
 
 ## 決定事項と理由
 - 最初の県は東京（本人指定）。他県への展開は東京版が動いてから
